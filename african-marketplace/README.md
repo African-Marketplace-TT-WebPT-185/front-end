@@ -1,5 +1,6 @@
-# Make another arbitrary change to push staging branch.
 # Getting Started with Create React App
+
+## Make another arbitrary change to push staging branch
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
