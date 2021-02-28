@@ -18,23 +18,23 @@ class Login extends React.Component {
     });
   };
 
-  login = e => {
+  signup = e => {
     e.preventDefault();
     axios.post('https://african-marketplace-tt-webpt.herokuapp.com/users/register', this.state.credentials)
       .then(res => {
         console.log('SignupForm: res: ', res)
         // ????????
         localStorage.setItem('token', res.data.payload);
-        this.props.history.push('/home');
+        // this.props.history.push('/home');
       })
-      .catch(err => console.error('cannot login to server: ', err.message));
+      .catch(err => console.error('cannot signup to server: ', err.message));
   };
 
   render() {
     return (
       <div>
         <h1>Sign-Up Form</h1>
-        <form onSubmit={this.login}>
+        <form onSubmit={this.signup}>
           <input
             type='text'
             name='username'
