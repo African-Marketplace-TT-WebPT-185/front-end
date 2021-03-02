@@ -22,7 +22,9 @@ class Login extends React.Component {
 
   signup = e => {
     e.preventDefault();
-    axios.post('https://african-marketplace-tt-webpt.herokuapp.com/users/register', this.state.credentials)
+    // axios.post('https://african-marketplace-tt-webpt.herokuapp.com/users/register', this.state.credentials)
+    axios.post('http://localhost:5000/users/register', this.state.credentials)
+
       .then(res => {
         console.log('SignupForm: res: ', res)
         // ????????
