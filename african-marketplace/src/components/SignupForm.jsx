@@ -1,13 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 
+const initialState = {
+  credentials: {
+    username: '',
+    password: ''
+  }
+};
+
 class Login extends React.Component {
-  state = {
-    credentials: {
-      username: '',
-      password: ''
-    }
-  };
+  state = initialState
 
   handleChange = e => {
     this.setState({
@@ -28,6 +30,7 @@ class Login extends React.Component {
         // this.props.history.push('/home');
       })
       .catch(err => console.error('cannot signup to server: ', err.message));
+      this.setState(initialState)
   };
 
   render() {
@@ -38,15 +41,27 @@ class Login extends React.Component {
           <input
             type='text'
             name='username'
+            placeholder='Username'
             value={this.state.credentials.username}
             onChange={this.handleChange}
           />
           <input
             type='password'
             name='password'
+            placeholder='Password'
             value={this.state.credentials.password}
             onChange={this.handleChange}
           />
+          <select
+            type='text'
+            name='role'
+            value={this.state.credentials.role}
+            onChange={this.handleChange}
+          >
+            <option value="">---Select---</option>
+            <option value="owner">Owner</option>
+            <option value="user">User</option>
+          </select>
           <button>Sign Up</button>
         </form>
       </div>
