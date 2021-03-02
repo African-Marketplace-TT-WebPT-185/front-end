@@ -1,0 +1,69 @@
+html, body, #root, .App, .owner {
+    height: 100%;
+  }
+
+.App {
+    background-color: rgb(170 201 232 / 30%);
+}
+
+.owner {
+    margin: 0% 2%;
+}
+
+.owner-top {
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 1% auto;
+    padding: 1%;
+    height: fit-content;
+    background-color: antiquewhite;
+}
+
+.owner-bottom {
+    border: 2px solid black;
+    margin: 1% auto;
+    padding: 1%;
+    height: 80%;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background-color: honeydew;
+}
+
+.item{
+    border: 1px dotted black;
+    padding: 1%;
+    width: 25%;
+    box-shadow: rgb(136 165 191 / 48%) 6px 2px 16px 0px, rgb(255 255 255 / 80%) -6px -2px 16px;
+    background: rgb(236 230 176 / 50%);
+    border-radius: 5px 20px 5px;
+    height: fit-content;
+}
+
+.item-top {
+    margin: 0 auto;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-img {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.icon {
+    margin: 0 2%;
+    border-radius: 50%;
+}
+
+.btn {
+    margin-left: 80%;
+    margin-bottom: 2%;
+}
+
+.user-img {
+    border-radius: 50%
+}
