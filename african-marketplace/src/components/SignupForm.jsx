@@ -4,11 +4,12 @@ import axios from 'axios';
 const initialState = {
   credentials: {
     username: '',
-    password: ''
+    password: '',
+    department:''
   }
 };
 
-class Login extends React.Component {
+class Signup extends React.Component {
   state = initialState
 
   handleChange = e => {
@@ -23,13 +24,13 @@ class Login extends React.Component {
   signup = e => {
     e.preventDefault();
     // axios.post('https://african-marketplace-tt-webpt.herokuapp.com/users/register', this.state.credentials)
-    axios.post('http://localhost:5000/users/register', this.state.credentials)
+    axios.post('http://localhost:5000/auth/register', this.state.credentials)
 
       .then(res => {
         console.log('SignupForm: res: ', res)
-        // ????????
+        
         localStorage.setItem('token', res.data.payload);
-        // this.props.history.push('/home');
+        this.props.history.push('/login');
       })
       .catch(err => console.error('cannot signup to server: ', err.message));
       this.setState(initialState)
@@ -56,13 +57,13 @@ class Login extends React.Component {
           />
           <select
             type='text'
-            name='role'
-            value={this.state.credentials.role}
+            name='department'
+            value={this.state.credentials.department}
             onChange={this.handleChange}
           >
-            <option value="">---Select---</option>
-            <option value="owner">Owner</option>
-            <option value="user">User</option>
+            <option value="">---Department---</option>
+            <option value="seller">Seller</option>
+            <option value="buyer">Buyer</option>
           </select>
           <button>Sign Up</button>
         </form>
@@ -71,4 +72,4 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+export default Signup;
