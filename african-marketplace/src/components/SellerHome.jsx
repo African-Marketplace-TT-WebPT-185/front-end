@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+ // eslint-disable-next-line
 import SellerItem from "./SellerItem";
+ // eslint-disable-next-line
 import profileIcon from "../assets/profile-icon.png";
+ // eslint-disable-next-line
 import { Button } from "reactstrap";
 
 import { getItems, getUsers } from './../utils/useApi';

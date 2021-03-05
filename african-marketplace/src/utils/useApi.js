@@ -45,7 +45,7 @@ export const getItem = ({ id }) => {
 }
 
 export const addItem = (user, item) => {
-    axios()
+    axios()   // eslint-disable-next-line
         .post('/items/additem', user.id, item)
         .then(res => {console.log('item successfully added: ', res)})
         .catch(err => {console.log('error adding item: ', err)})
@@ -54,7 +54,7 @@ export const addItem = (user, item) => {
 export const editItem = (user, item) => {
     axios()
         .put(`/items/${ item.id }`)
-        .then(res => ('item edited successfully: ',res))
+        .then(res => console.log('item edited successfully: ', res))
         .catch(err => {console.log('error editing item: ', err)})
 }
 

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router';
 import SellerHome from './components/SellerHome';
@@ -16,13 +17,13 @@ function App() {
  
 
   return (
-    <div className="App">
+    <div className='App'>
 
       <Nav />
       <h1>Welcome to African Marketplace</h1>
       <Switch>
-          <Route path="/seller" component={SellerHome} />
-          <Route path="/buyer" component={BuyerHome} />
+          <Route path='/seller' component={SellerHome} />
+          <Route path='/buyer' component={BuyerHome} />
           <Route path='/signup' component={SignupForm} />
           <Route path='/login' component={LoginForm} />
       </Switch>

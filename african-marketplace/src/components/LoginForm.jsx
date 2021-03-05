@@ -1,5 +1,9 @@
 import React from 'react';
 import axiosWithCors from './../utils/axiosWithCors';
+ // eslint-disable-next-line
+import SellerHome from './SellerHome'
+ // eslint-disable-next-line
+import BuyerHome from './BuyerHome'
 
 class Login extends React.Component {
   state = {
@@ -26,7 +30,7 @@ class Login extends React.Component {
         console.log('LoginForm: res: ', res)
         // ????????
         localStorage.setItem('token', res.data.token);
-        this.props.history.push('/SellerHome');
+        this.props.history.push('/buyer');
       })
       .catch(err => console.error('cannot login to server: ', err.message));
   };
