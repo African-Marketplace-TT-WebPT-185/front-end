@@ -2,8 +2,7 @@ import React from "react";
 
 import editIcon from "../assets/edit-icon.png";
 import deleteIcon from "../assets/delete-icon.png";
-import profileIcon from "../assets/profile-icon.png";
-import { Link } from "react-router-dom";
+// import profileIcon from "../assets/profile-icon.png"
 
 
 const Item = (props) => {
@@ -11,11 +10,11 @@ const Item = (props) => {
   
   return (
     <div className="item">
-      <div classname="item-top">
+      <div className="item-top">
         <img
           className="item-img"
           src={props.itemDetails.itemImgUrl}
-          alt="item image"
+          alt="item"
         />
         <h3>{props.itemDetails.itemName}</h3>
         <h5>{props.itemDetails.itemLocation}</h5>
