@@ -9,6 +9,16 @@ const initialState = {
   }
 };
 
+const axiosWithCors = () => {
+
+  return axios.create({
+    headers: {
+      'Access-Control-Origin-Allow': '*'
+    },
+    baseURL: 'https://backup-backend-185.herokuapp.com'
+  })
+}
+
 class Signup extends React.Component {
   state = initialState
 
@@ -23,13 +33,12 @@ class Signup extends React.Component {
 
   signup = e => {
     e.preventDefault();
-    // axios.post('https://african-marketplace-tt-webpt.herokuapp.com/users/register', this.state.credentials)
-    axios.post('http://localhost:5000/auth/register', this.state.credentials)
+    axiosWithCors().post('/auth/register', this.state.credentials)
 
       .then(res => {
         console.log('SignupForm: res: ', res)
         
-        localStorage.setItem('token', res.data.payload);
+        // localStorage.setItem('token', res.data.token);
         this.props.history.push('/login');
       })
       .catch(err => console.error('cannot signup to server: ', err.message));

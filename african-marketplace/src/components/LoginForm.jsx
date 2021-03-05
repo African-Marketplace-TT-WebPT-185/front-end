@@ -1,6 +1,17 @@
 import React from 'react';
 import axios from 'axios';
 
+const axiosWithCors = () => {
+
+  return axios.create({
+    headers: {
+      'Access-Control-Origin-Allow': '*'
+    },
+    baseURL: 'https://backup-backend-185.herokuapp.com'
+  })
+}
+
+
 class Login extends React.Component {
   state = {
     credentials: {
@@ -20,8 +31,7 @@ class Login extends React.Component {
 
   login = e => {
     e.preventDefault();
-    // axios.post('https://african-marketplace-tt-webpt.herokuapp.com/users/login', this.state.credentials)
-    axios.post('http://localhost:5000/auth/login', this.state.credentials)
+    axiosWithCors().post('/auth/login', this.state.credentials)
 
       .then(res => {
         console.log('LoginForm: res: ', res)
