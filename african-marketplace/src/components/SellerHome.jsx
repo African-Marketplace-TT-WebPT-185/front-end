@@ -3,28 +3,6 @@ import SellerItem from "./SellerItem";
 import profileIcon from "../assets/profile-icon.png";
 import { Button } from "reactstrap";
 
-const dummyData = {
-  sellerName: "Some name",
-  sellerLocation: "Some location",
-  sellerItems: [
-    {
-      itemName: "Beans",
-      itemId: 1,
-      itemPrice: "5.99",
-      itemLocation: "Kenya",
-      itemImgUrl:
-        "https://food.unl.edu/newsletters/images/assorted-dry-beans.png",
-    },
-    {
-      itemName: "Tomatoes",
-      itemId: 2,
-      itemPrice: "2.99",
-      itemLocation: "Zimbabwe",
-      itemImgUrl:
-        "https://cdn.shopify.com/s/files/1/1698/1675/products/Tomato_Thessaloniki.jpg?v=1537070112",
-    },
-  ],
-};
 
 
 //!  Main Function and components renamed, state objects still need attention  //
