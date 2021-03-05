@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router';
 import SellerHome from './components/SellerHome';
 import BuyerHome from './components/BuyerHome';
@@ -9,8 +9,12 @@ import Nav from './components/Nav'
 import './App.css';
 
 
-
 function App() {
+
+ 
+  
+ 
+
   return (
     <div className="App">
 

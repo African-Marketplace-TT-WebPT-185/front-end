@@ -26,7 +26,7 @@ class Login extends React.Component {
         console.log('LoginForm: res: ', res)
         // ????????
         localStorage.setItem('token', res.data.token);
-        // this.props.history.push('/home');
+        this.props.history.push('/SellerHome');
       })
       .catch(err => console.error('cannot login to server: ', err.message));
   };

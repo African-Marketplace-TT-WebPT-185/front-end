@@ -3,17 +3,22 @@ import SellerItem from "./SellerItem";
 import profileIcon from "../assets/profile-icon.png";
 import { Button } from "reactstrap";
 
-
+import { getItems, getUsers } from './../utils/useApi';
 
 //!  Main Function and components renamed, state objects still need attention  //
 
-
 class SellerHome extends Component {
+
+    state = {
+      items:  getItems(),
+      users:  getUsers()
+    }
+   
 
   render() {
     return (
       <div className="owner">
-        <Button color="primary" size="lg">
+        {/* <Button color="primary" size="lg">
           Log out
         </Button>
         <section className=" owner-top">
@@ -27,7 +32,7 @@ class SellerHome extends Component {
                     <SellerItem itemDetails = {item}/>  
               )
           })}
-        </section>
+        </section> */}
       </div>
     );
   }

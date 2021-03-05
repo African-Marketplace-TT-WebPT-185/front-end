@@ -1,76 +1,74 @@
-import React, { useState, useEffect } from "react";
-import { axiosWithAuth as axios } from `./axiosWithAuth`
+import { axiosWithAuth as axios } from './axiosWithAuth'
 
 
 export const getItems = () => {
     axios()
-        .get(`/items`)
+        .get('/items')
         .then(res => {return(res.data)})
-        .catch(err => {console.log(`error fetching items:`, err)})
+        .catch(err => {console.log('error fetching items:', err)})
 }
 
 export const getUsers = () => {
     axios()
-        .get(`/users`)
+        .get('/users')
         .then(res => {return(res.data)})
-        .catch(err => {console.log(`error fetching users: `, err))
-
+        .catch(err => {console.log('error fetching users: ', err)})
 }
 
-export const getUser = ({ user.id }) => {
+export const getUser = ({ id }) => {
     axios()
-        .get(`/users/{user.id}`)
+        .get('/users/{user.id}')
         .then(res => {return(res.data)})
-        .catch(err => {console.log(`error fetching user: `, err))
+        .catch(err => {console.log('error fetching user: ', err)})
 }
 
-export const deleteUser = ({ user.id }) => {
+export const deleteUser = ({ id }) => {
     axios()
-        .delete(`/users/${ user.id }`)
-        .then(res => {console.log(`user deleted: `, res)})
-        .catch(err => {console.log(error deleting user: `, err`)})
+        .delete(`/users/${id}`)
+        .then(res => {console.log('user deleted: ', res)})
+        .catch(err => {console.log('error deleting user: ', err)})
 }
 
-export const getUserItems = ({ user.id }) => {
+export const getUserItems = ({ id }) => {
     axios()
-        .get(`/users/${user.id}/items`)
+        .get(`/users/${id}/items`)
         .then(res => {return(res.data)})
-        .catch(err => {console.log(`error getting user items: `, err)})
+        .catch(err => {console.log('error getting user items: ', err)})
 
 } 
 
-export const getItem = ({ item.id }) => {
+export const getItem = ({ id }) => {
     axios()
-        .get(`/items/${item.id}`)
+        .get(`/items/${id}`)
         .then(res => {return(res.data)})
-        .catch(err => {console.log(`error fetching item: `, err)})
+        .catch(err => {console.log('error fetching item: ', err)})
 }
 
 export const addItem = (user, item) => {
     axios()
-        .post(`/items/additem`, { user_id }, item)
-        .then(res => {console.log(`item successfully added: `, res)})
-        .catch(err => {console.log(`error adding item: `, err)})
+        .post('/items/additem', user.id, item)
+        .then(res => {console.log('item successfully added: ', res)})
+        .catch(err => {console.log('error adding item: ', err)})
     }
 
-export const editItem = (user.id, item) => {
+export const editItem = (user, item) => {
     axios()
         .put(`/items/${ item.id }`)
-        .then(res(`item edited successfully: `,res))
-        .catch(err => {console.log(`error editing item: `, err)})
+        .then(res => ('item edited successfully: ',res))
+        .catch(err => {console.log('error editing item: ', err)})
 }
 
-export const deleteItem = (item.id) => {
+export const deleteItem = (item) => {
     axios()
-        .delete(`items/${$item.id}`)
-        .then(res => {console.log(item deleted successfully: `, res`)})
-        .catch(err => {console.log( `error deleting item`)})
+        .delete(`items/${item.id}`)
+        .then(res => {console.log('item deleted successfully: ', res)})
+        .catch(err => {console.log( 'error deleting item: ', err)})
 } 
 
 export const getCategory = (cat) => {
     axios()
         .get(`/items/${cat}`)
         .then(res => {return(res.data)})
-        .catch(err => {console.log(`error getting category: `err)})
+        .catch(err => {console.log('error fetching category: ', err)})
 
 }
