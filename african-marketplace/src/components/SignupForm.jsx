@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+import axiosWithCors from './../utils/axiosWithCors';
 
 const initialState = {
   credentials: {
@@ -8,16 +8,6 @@ const initialState = {
     department:''
   }
 };
-
-const axiosWithCors = () => {
-
-  return axios.create({
-    headers: {
-      'Access-Control-Origin-Allow': '*'
-    },
-    baseURL: 'https://backup-backend-185.herokuapp.com'
-  })
-}
 
 class Signup extends React.Component {
   state = initialState

@@ -1,16 +1,5 @@
 import React from 'react';
-import axios from 'axios';
-
-const axiosWithCors = () => {
-
-  return axios.create({
-    headers: {
-      'Access-Control-Origin-Allow': '*'
-    },
-    baseURL: 'https://backup-backend-185.herokuapp.com'
-  })
-}
-
+import axiosWithCors from './../utils/axiosWithCors';
 
 class Login extends React.Component {
   state = {

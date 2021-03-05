@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import SellerItem from "./SellerItem";
 import profileIcon from "../assets/profile-icon.png";
 import { Button } from "reactstrap";
 
 const dummyData = {
-  sellerrName: "Some name",
+  sellerName: "Some name",
   sellerLocation: "Some location",
   sellerItems: [
     {
@@ -40,7 +39,7 @@ class SellerHome extends Component {
           Log out
         </Button>
         <section className=" owner-top">
-          <img src={profileIcon} alt="profile photo" className="user-img" />
+          <img src={profileIcon} alt="profile" className="user-img" />
           <h2>Welcome, {dummyData.ownerName}</h2>
           <h3>{dummyData.ownerLocation}</h3>
         </section>
