@@ -11,6 +11,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+
       <Nav />
       <h1>Welcome to African Marketplace</h1>
       <Switch>
@@ -19,6 +20,7 @@ function App() {
           <Route path='/signup' component={SignupForm} />
           <Route path='/login' component={LoginForm} />
       </Switch>
+
     </div>
   );
 }
