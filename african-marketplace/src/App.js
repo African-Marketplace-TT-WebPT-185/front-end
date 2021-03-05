@@ -1,38 +1,24 @@
-// import './App.css';
-// // import Nav from './Nav'
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>App</h1>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-//!  Old Code above new below  //
-
+import React from 'react'
 import { Route, Switch } from 'react-router';
-import { Link } from 'react-router-dom';
+import SellerHome from './components/SellerHome';
+import BuyerHome from './components/BuyerHome';
+import LoginForm from './components/LoginForm'
+import SignupForm from './components/SignupForm'
+import Nav from './components/Nav'
+
 import './App.css';
-import OwnerHome from './components/OwnerHome';
-
-
-
 
 function App() {
   return (
     <div className="App">
+      <Nav />
       <h1>Welcome to African Marketplace</h1>
-      
-
       <Switch>
-          <Route path="/owner">
-            <OwnerHome/>
-          </Route>
+          <Route path="/seller" component={SellerHome} />
+          <Route path="/buyer" component={BuyerHome} />
+          <Route path='/signup' component={SignupForm} />
+          <Route path='/login' component={LoginForm} />
       </Switch>
-        
     </div>
   );
 }

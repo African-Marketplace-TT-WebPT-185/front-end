@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import OwnerItem from "./OwnerItem";
+import SellerItem from "./SellerItem";
 import profileIcon from "../assets/profile-icon.png";
 import { Button } from "reactstrap";
 
 const dummyData = {
-  ownerName: "Some name",
-  ownerLocation: "Some location",
-  ownerItems: [
+  sellerrName: "Some name",
+  sellerLocation: "Some location",
+  sellerItems: [
     {
       itemName: "Beans",
       itemId: 1,
@@ -28,10 +28,10 @@ const dummyData = {
 };
 
 
-class OwnerHome extends Component {
+//!  Main Function and components renamed, state objects still need attention  //
 
- 
 
+class SellerHome extends Component {
 
   render() {
     return (
@@ -47,7 +47,7 @@ class OwnerHome extends Component {
         <section className="owner-bottom">
           {dummyData.ownerItems.map(item => {
               return (
-                    <OwnerItem itemDetails = {item}/>  
+                    <SellerItem itemDetails = {item}/>  
               )
           })}
         </section>
@@ -56,4 +56,4 @@ class OwnerHome extends Component {
   }
 }
 
-export default OwnerHome;
+export default SellerHome;
