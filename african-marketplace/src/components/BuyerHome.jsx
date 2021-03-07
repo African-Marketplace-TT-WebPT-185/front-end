@@ -1,31 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { useEffect } from 'react'
 import Item from './Item'
 
-export default function UserHome() {
-    const [items, setItems] = useState([])
-
-    function getItems() {
-        axios
-            .get('http://localhost:5000')
-            .then(res => {
-                console.log('res: ', res)
-                setItems(res.data)
-            })
-            .catch(err => {
-               alert(`problem fetching data ${err}`)
-            })
-    }
+export default function UserHome(props) {
 
     useEffect(() => {
-        getItems()
-        }, [])
+        
+    }, [])
 
     return (
         <div>
-            <h1>Welcome to African Marketplace</h1>
             {
-                items.map(item => {
+                props.items && props.items.map(item => {
                     return(
                         <Item 
                             item={item}

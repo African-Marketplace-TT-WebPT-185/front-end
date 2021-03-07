@@ -4,14 +4,18 @@ import { axiosWithAuth as axios } from './axiosWithAuth'
 export const getItems = () => {
     axios()
         .get('/items')
-        .then(res => {return(res.data)})
+        .then(res => {
+            console.log('getItems-res: ', res)
+            return(res.data)})
         .catch(err => {console.log('error fetching items:', err)})
 }
 
 export const getUsers = () => {
     axios()
         .get('/users')
-        .then(res => {return(res.data)})
+        .then(res => {
+            console.log('getUsers-res: ', res)
+            return(res.data)})
         .catch(err => {console.log('error fetching users: ', err)})
 }
 
