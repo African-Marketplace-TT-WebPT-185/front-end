@@ -5,8 +5,9 @@ export const axiosWithAuth = () => {
 
   return axios.create({
     headers: {
-      authorization: token
+      authorization: token,
+      'Access-Control-Origin-Allow': '*'
     },
-    baseURL: 'https://african-marketplace-tt-webpt.herokuapp.com/'
+    baseURL: 'https://backup-backend-185.herokuapp.com/'
   })
 }
