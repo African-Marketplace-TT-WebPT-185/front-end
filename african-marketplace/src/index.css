@@ -67,3 +67,38 @@ html, body, #root, .App, .owner {
 .user-img {
     border-radius: 50%
 }
+
+form {
+    
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin:1% auto;
+  }
+  form > input,select,textarea, button {
+    background-color: #2d2d37;
+    border: 0;
+    padding: 6px 0;
+    font-size: 1rem;
+    width: 100%;
+    outline: 0;
+    color: white;
+    border-bottom: 1px solid #e64944;
+    margin-right: 8px;
+    padding: 1%;
+  }
+  
+  button {
+    background-color: #e64944;
+    border: 1px solid #e64944;
+    color: white;
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+  
+  input::placeholder, select::placeholder, textarea::placeholder {
+    color: #8a6867;
+    opacity: 1;
+  }
+  
